@@ -1,0 +1,12 @@
+/*
+Looping a Triangle
+Creates the hash right-triangle figure
+Chapter 2 - Exercise 1 
+*/
+
+
+let result = "";
+for(let i = 0; i < 7; i++) {
+  result += "#"
+  console.log(result);
+}
