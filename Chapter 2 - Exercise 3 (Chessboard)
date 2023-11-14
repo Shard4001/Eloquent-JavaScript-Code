@@ -1,0 +1,24 @@
+/*
+Chessboard
+Creates a chessboard figure with spaces and hashes when given a set dimension
+Chapter 2 - Exercise 3
+*/
+
+let dimensions = 8;
+let string = "";
+
+for(let i = 0; i < dimensions; i++) {
+    for(let k = 0; k < dimensions/2; k++) {
+      if(i % 2 === 0) {
+        string += " ";
+        string +="#";
+    }
+    else {
+      string += "#";
+      string += " ";
+    }
+  }
+    string += "\n"
+}
+
+console.log(string);
