@@ -1,0 +1,29 @@
+/*
+Bean Counting
+Counts the number occurances a character has in a string
+Chapter 3 - Exercise 3 
+*/
+
+
+function countBs(string) {
+let counter = 0;
+  for(let i = 0; i < string.length; i++) {
+    if (string[i] === "B") {
+      counter++;
+    }
+  }
+  return counter;
+}
+console.log(countBs("BumbleBee"));
+
+
+function countChar(string, letter) {
+  let counter = 0;
+  for (let i = 0; i < string.length; i++) {
+    if (string[i] === letter) {
+      counter++
+    }
+  }
+  return counter;
+}
+console.log(countChar("Walmart", "a"))
