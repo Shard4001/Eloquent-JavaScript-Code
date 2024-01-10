@@ -17,7 +17,7 @@ if (num < 0) {
     return false;
   }
   else {
-    return isEven((num - 2) );
+    return isEven((num - 2));
   }
 }
 
