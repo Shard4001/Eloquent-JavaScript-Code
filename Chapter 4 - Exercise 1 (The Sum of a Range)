@@ -1,0 +1,41 @@
+/*
+The Sum of a Range
+Creates an array with given inputs and then calculates sum of all elements
+Chapter 4 - Exercise 1 
+*/
+
+
+function range(startNum, endNum) {
+  let num = startNum;
+  const arr = [];
+  
+  for(let i = 0; i <= endNum - startNum; i++) {
+    arr[i] = num;
+    num ++
+  }
+  return arr;
+}
+
+function sum(arr) {
+  let sum = 0
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+  return sum;
+}
+
+//last parameter is optional
+function modifiedRange(startNum, endNum, step = 1) {
+  let num = startNum;
+  const arr = [];
+
+  for (let i = 0; i <= (endNum - startNum)/step; i++ ) {
+    arr[i] = num;
+    num += step;
+  }
+  return arr; 
+}
+
+console.log(range(1, 10));
+console.log(sum(range(1, 10)));
+console.log(modifiedRange(5,2,-1));
