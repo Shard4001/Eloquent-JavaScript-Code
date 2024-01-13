@@ -1,0 +1,32 @@
+/*
+Reversing an Array
+Reverses an inputted array with two slightly different methods
+Chapter 4 - Exercise 2 
+*/
+
+//can produce a new array
+function reverseArray(arr) {
+  let arr2 = [];
+
+  for(let i = 0; i < arr.length; i++) {
+    arr2[i] = arr[(arr.length - 1) - i];
+  }
+  return arr2;
+}
+
+//has to modify the inputted/given array
+function reverseArrayInPlace(arr) {
+  let value = 0;
+  for (let i = 0; i < (arr.length - 1)/2; i++) {
+    value = arr[(arr.length - 1) - i];
+    arr[(arr.length - 1) - i] = arr[i];
+    arr[i] = value;
+  }
+  return arr;
+}
+
+
+const arr = [11,22,33]
+console.log(reverseArray(arr))
+let arr2 = [1,2,3,4]
+console.log(reverseArrayInPlace(arr2))
