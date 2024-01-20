@@ -1,0 +1,78 @@
+/*
+A List
+Creates and modifies a list from an array and other sorts of functions
+Chapter 4 - Exercise 3
+*/
+
+
+function arrayToList(arr) {
+  let list = null;
+
+  for (let i = arr.length - 1; i >= 0; i--) {
+    list = { value: arr[i], rest: list };
+  }
+
+  return list;
+}
+
+
+function listToArray(list) {
+let arr = [];
+
+  while (list != null) {
+    arr.push(list.value);
+    list = list.rest
+  }
+
+return arr;
+}
+
+
+function prepend(element, list) {
+  let newList = {};
+
+  newList = {value: element, rest:list};
+
+  return newList;
+}
+
+
+function nth(list, number) {
+let counter = 0
+  
+  while (list != undefined) {
+    if (counter == number) {
+      return list.value
+    }
+    else {
+      list = list.rest;
+      counter++;
+    }
+  
+  } 
+return undefined;
+}
+
+
+function recursive_nth(list, number) {
+let counter = 0;
+  
+if (counter == number) {
+  return list.value
+}  
+
+  else  {
+   return recursive_nth(list.rest, number - 1) 
+  }
+}
+
+
+
+const arr = [1, 2, 3];
+let list = arrayToList(arr);
+
+console.log(list);
+console.log(listToArray(list));
+console.log(prepend(4, list)); 
+console.log(nth(list, 2));
+console.log(recursive_nth(list, 2));
